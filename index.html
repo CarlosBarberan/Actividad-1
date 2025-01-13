@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM) - Información</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Document Object Model (DOM)</h1>
+        <p>Autor: Carlos Andrés Barberán Castro</p>
+    </header>
+
+    <section>
+        <h2>ACTIVIDAD AUTÓNOMA 1</h2>
+        <p>Esta página web proporciona una visión general del Document Object Model (DOM), destacando sus características y objetivos.</p>
+    </section>
+
+    <section>
+        <h2>Características del DOM</h2>
+        <ul>
+            <li><strong>Estructura en Árbol:</strong> El DOM representa el documento como una estructura de árbol de nodos.</li>
+            <li><strong>Interfaz Dinámica:</strong> Permite la modificación de la estructura, estilo y contenido del documento de manera dinámica.</li>
+            <li><strong>Independencia de Lenguaje:</strong> Aunque se usa comúnmente con JavaScript, puede ser manipulado desde diversos lenguajes de programación.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Objetivos del DOM</h2>
+        <ul>
+            <li><strong>Accesibilidad:</strong> Proporcionar una forma estándar de acceder y manipular la estructura de documentos HTML y XML.</li>
+            <li><strong>Compatibilidad:</strong> Facilitar la interpretación y manipulación de documentos de manera consistente en diferentes navegadores.</li>
+            <li><strong>Interactividad:</strong> Permitir la creación de aplicaciones web dinámicas que respondan a las acciones del usuario en tiempo real.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Ejemplos Prácticos de DOM</h2>
+        <div id="dom-example">
+            <p id="example-paragraph">Este es un párrafo que será modificado mediante JavaScript.</p>
+            <button onclick="changeText()">Cambiar Texto</button>
+        </div>
+        <script>
+            function changeText() {
+                document.getElementById("example-paragraph").textContent = "El texto ha sido cambiado utilizando el DOM.";
+            }
+        </script>
+
+        <div id="dom-list-example">
+            <ul id="item-list">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+            <button onclick="addItem()">Agregar Elemento</button>
+        </div>
+        <script>
+            function addItem() {
+                let ul = document.getElementById("item-list");
+                let li = document.createElement("li");
+                li.textContent = "Nuevo Elemento";
+                ul.appendChild(li);
+            }
+        </script>
+    </section>
+
+    <footer>
+        <p>Enlace: 
+            <a href="https://github.com/tu_usuario/tu_repositorio" target="_blank">Repositorio GitHub</a> | 
+        </p>
+    </footer>
+
+</body>
+</html>
